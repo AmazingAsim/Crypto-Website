@@ -46,10 +46,11 @@ export default function MainSection() {
                 </Box>
             </Stack>
          </Container>
+
          <Container>
 
          <Grid container sx={{marginTop:"20px"}} spacing={2} columnSpacing={3}>
-              <Grid item xl={6}>
+              <Grid item xl={6} xs={12} sx={{height:{xs:"60vh"}}} >
                   <Graph></Graph>
                   <Box sx={{textAlign:"left",marginTop:"16px",marginLeft:"-25px",padding:"16px",borderRadius:"16px",background:"white",width:"98%"}}>
                       <Chip  label="Loans" sx={{background:"#5F00D9",color:"white"}} />
@@ -58,9 +59,9 @@ export default function MainSection() {
                       </Typography>
                     </Box>
               </Grid>
-              <Grid item xl={6}>
+              <Grid item xl={6} xs={12} sx={{height:{xs:"60vh"}}} >
               <RecentTransactions />
-              <Box sx={{textAlign:"left",marginTop:"16px",padding:"16px",borderRadius:"16px",background:"#5F00D9",width:"98%"}}>
+              <Box sx={{textAlign:"left",marginTop:"16px",padding:"16px",borderRadius:"16px",background:"#5F00D9",width:"98%",maginLeft:{xs:"-16px"}}}>
                       <Chip  label="Loans" sx={{color:"#5F00D9",background:"white"}} />
                       <Typography variant='h5' color='white'>
                       Learn more about Loans – Keep your Bitcoin, <br/> access it’s value without selling it
