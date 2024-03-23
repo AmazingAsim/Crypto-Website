@@ -11,6 +11,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import EmailIcon from '@mui/icons-material/Email';
 import ChatBubbleRoundedIcon from '@mui/icons-material/ChatBubbleRounded';
 import Form from './Form';
+import { AddBoxOutlined } from '@mui/icons-material';
 export default function Transactions() {
   const [value, setValue] = React.useState('1');
 
@@ -21,7 +22,7 @@ export default function Transactions() {
 
   return (
     <div style={{ flex: "1" }}>
-      <AppBar position="static" color='inherit' elevation={0}>
+      <AppBar position="sticky" color='inherit' elevation={0}>
         <Toolbar style={{ display: 'flex', justifyContent: "space-between" }}>
           <Typography variant="h4">
             Transactions
@@ -47,23 +48,10 @@ export default function Transactions() {
                   <Tab icon={<Chip label="111" />} iconPosition="end" label="Trade" value="4" />
 
 
-                  <FormControl sx={{ marginLeft: "auto", width: '25ch', outline: "none" }}>
-                    <OutlinedInput
-                      inputProps={{ placeholder: 'Enter your text here' }}
-
-
-                      type='text'
-                      startAdornment={
-                        <InputAdornment position="end">
-                          <IconButton
-                            edge="start"
-                          >
-                            <SearchIcon />
-                          </IconButton>
-                        </InputAdornment>
-                      }
-                    />
-                  </FormControl>
+                  <Box sx={{ marginLeft: "auto",alignItems:"center",display:"flex",gap:"5px"}}>
+                      <SearchIcon />
+                    <input style={{border:"none",padding:"10px"}} type="text" placeholder='Search by id or destinaton'/>
+                  </Box>
 
                 </TabList>
               </Box>

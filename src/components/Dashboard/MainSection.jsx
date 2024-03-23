@@ -10,7 +10,7 @@ import RecentTransactions from './RecentTransactions'
 export default function MainSection() {
   return (
     <div style={{flex:1}}>
-      <AppBar position="static" color='inherit' elevation={0}>
+      <AppBar position="sticky" color='inherit' elevation={0}>
         <Toolbar style={{display:'flex',justifyContent:"space-between"}}>
           <Typography variant="h4">
            Dashboard
