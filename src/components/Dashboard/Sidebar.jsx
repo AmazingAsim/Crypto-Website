@@ -1,9 +1,10 @@
 import React from 'react';
-import { Drawer, List, ListItem, ListItemIcon, ListItemText,Typography } from '@mui/material';
+import { Drawer, List, ListItem, ListItemIcon,ListItemButton, ListItemText,Typography } from '@mui/material';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-
+import {useNavigate} from 'react-router-dom'
 export default function Sidebar() {
+  let navigate = useNavigate()
   return (
     <Drawer
       variant="permanent"
@@ -20,12 +21,21 @@ export default function Sidebar() {
         @DoSomeCoding
       </Typography>
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
+        {['Dashboard', 'Transactions'].map((text, index) => (
+          <ListItem role='button' key={text} onClick={()=>{
+            if(text=='Dashboard'){
+              navigate('/')
+            }
+            else if(text=='Transactions'){
+              navigate("transactions")
+            }
+          }}>
+            <ListItemButton>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon>
             <ListItemText primary={text} />
+            </ListItemButton>
           </ListItem>
         ))}
       </List>
