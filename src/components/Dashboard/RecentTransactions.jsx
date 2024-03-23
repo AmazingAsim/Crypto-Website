@@ -28,6 +28,7 @@ export default function RecentTransactions() {
 
     ]
   return (
+     <Box sx={{marginTop:{xs:"50px",xl:"0px"},marginLeft:{xs:"-30px",xl:"0px"}}}>
     <div style={{background:"white",padding:"16px",borderRadius:"16px",height:"345px",width:'98%'}}>
         <Typography variant='h5' sx={{color:'grey',textAlign:"left",marginBottom:"10px"}}>Recent Transactions</Typography>
         <Stack direction='column' divider={<Divider/>} rowGap={3}>
@@ -65,5 +66,6 @@ export default function RecentTransactions() {
             sx={{width:'100%',background:"#EEEEF4",color:"black",border:"none",boxShadow:"none","&:hover":{background:"black",color:"white"}}}>View All</Button>
         </Box>
     </div>
+    </Box>
   )
 }

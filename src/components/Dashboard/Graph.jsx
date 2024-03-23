@@ -25,7 +25,7 @@ export default function Graph() {
 
     let data = generateRandomNumbers(100);
   return (
-    <div style={{background:"white",padding:'16px',marginLeft:"-25px",borderRadius:"16px",height:"345px"}}>
+    < Box sx={{background:"white",padding:'16px',marginLeft:"-25px",borderRadius:"16px",height:{xl:"345px",xs:"400px"}}}>
 
 <Stack direction={'row'} columnGap={5} >
                 <Box sx={{width:"40%"}}>
@@ -78,7 +78,7 @@ export default function Graph() {
         </Box>
       </Stack>
     
-    </div>
+    </Box>
     
   );
 }
